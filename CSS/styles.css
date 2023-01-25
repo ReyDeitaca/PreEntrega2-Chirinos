@@ -245,38 +245,60 @@ p{
 
 #d1{
     margin-top: 2rem;
-    display: flex;
     grid-area: d1;
-    padding: 2rem;
-    width: 45rem;
-    background-color:rgba(249, 158, 1, 0.904);
-    justify-content: center;
+    padding: 4rem;
+    height: 15rem;
+    background-color: #00748dee;
+    display: flex;
+
+}
+
+#d1 div {
+    text-align: center;
+
+}
+
+#d2 {
+    grid-area: d2;
+    background-color: rgba(249, 158, 1, 0.904);
 }
 
 #d2 h2 {
-    text-align: center;
-}
-#d2 {
     margin-top: 2rem;
-    display: grid;
-    grid-area: d2;
-    background-color:rgba(249, 158, 1, 0.904);
+    text-align: center;
 }
 
 .fotos {
-    display: flex;
-    height: 25rem ;
-    width: 25rem ;
-    gap: 2rem;
-    
+    display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-items: center;
+        column-gap: 1rem;
+        margin-top: 2rem;
+        margin-bottom: 4rem;
 }
+
+.fotos img{
+    height: 25rem;
+    width: 25rem;
+}
+
 #d3 {
     grid-area: d3;
-
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    background-color: #00748dee;
 }
 
+.escombros{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    text-align: justify;
+    width: 32rem;
+}
 
 .videod {
+    display: grid;
     background-color: #00738dee;;    
     padding: 3rem;
     width: 25rem;
@@ -327,7 +349,36 @@ p{
 
 /*contacto*/
 
+#bodyc{
+    display: grid;
+    grid-template-areas: 
+    "header"
+    "formulario"
+    "footer";
+    grid-column: 1fr;
+}
+
+#formulario {
+    grid-area: formulario;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    margin: 10rem;
+}
+
+#formulario h1 {
+    background-color: #8D8379;
+    color: white;
+    border-radius: 20%;
+}
+.datos {
+    font-size: 2.5rem;
+    background-color: #00748d;
+    margin-top: 2rem;
+}
+
 .botonenviar {
+    display: flex;
     transition: all 2s;
     height: 2rem;
     width: 6rem;
@@ -348,6 +399,7 @@ footer{
     align-items: center;
     text-align: center;
     gap: 1rem;
+    bottom: 0;
 }
 @media screen and (min-width: 1200px) {
     footer {
@@ -360,7 +412,4 @@ footer{
     footer p {
         font-size: 1.2rem;
     }
-}
-.logofooter {
-    flex-direction: column;
 }
